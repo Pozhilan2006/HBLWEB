@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    font-family: 'Tomorrow', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: always;
+  }
+  
+  body {
+    @apply bg-space-black text-white;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, a, button {
+    @apply font-tomorrow;
+  }
+}
+
+/* Custom Classes */
+@layer components {
+  .hackathon-title {
+    @apply font-orbitron uppercase tracking-wider font-bold text-neon-green;
+    letter-spacing: 0.1em;
+  }
+
+  .terminal-text {
+    @apply font-mono text-neon-green;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .terminal-container {
+    @apply flex items-center justify-center min-h-screen bg-black p-4;
+  }
+
+  .terminal-content {
+    @apply flex items-center space-x-2 text-xl md:text-2xl;
+  }
+
+  .cursor-blink {
+    @apply inline-block;
+    animation: blink 1s step-end infinite;
+  }
+
+  .cyberpunk-card {
+    @apply bg-opacity-10 backdrop-blur-sm bg-white 
+           border border-neon-green rounded-lg p-6
+           transition-all duration-300;
+  }
+
+  .cyberpunk-card:hover {
+    @apply transform scale-105;
+    box-shadow: 0 0 10px theme('colors.neon-green');
+  }
+
+  .nav-link {
+    @apply px-4 py-2 text-white transition-all duration-300
+           hover:text-neon-green relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 
+           bg-neon-green transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+    box-shadow: 0 0 5px theme('colors.neon-green');
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-8 text-center text-neon-green;
+  }
+
+  .loading-screen {
+    @apply fixed inset-0 bg-space-black z-50
+           flex items-center justify-center;
+  }
+
+  /* Tech Elements */
+  .tech-line {
+    @apply absolute bg-neon-green/20;
+    height: 1px;
+  }
+
+  .tech-dot {
+    @apply absolute w-2 h-2 bg-neon-green rounded-full;
+    animation: pulse 2s infinite;
+  }
+
+  .tech-border {
+    @apply border border-neon-green/30;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+} 
