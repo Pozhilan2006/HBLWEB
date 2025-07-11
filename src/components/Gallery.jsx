@@ -17,7 +17,7 @@ const Gallery = () => {
     <section id="gallery" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title mb-12">
-          Hackathon Memories
+          Our Offline Hackathon
         </h2>
 
         <div className="relative overflow-hidden">
@@ -55,7 +55,7 @@ const Gallery = () => {
           .carousel-track {
             display: flex;
             gap: 1rem;
-            animation: infiniteScroll 15s linear infinite;
+            animation: infiniteScroll 18s linear infinite; /* Reduced speed by 20% from 15s to 18s */
             width: fit-content;
             transform: translateZ(0);
           }
@@ -68,7 +68,7 @@ const Gallery = () => {
             overflow: hidden;
             transform: translateZ(0);
             backface-visibility: hidden;
-            transition: transform 0.3s ease;
+            transition: transform 0.36s ease; /* Reduced speed by 20% from 0.3s to 0.36s */
           }
 
           .carousel-item:hover {

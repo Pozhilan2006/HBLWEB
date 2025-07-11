@@ -5,24 +5,27 @@ import PrizeBadge from './PrizeBadge';
 const Prizes = () => {
   const prizes = [
     {
-      place: '1st Prize',
+      place: 'Winner',
       amount: '₹30,000',
       description: 'worth gift voucher',
       color: 'from-yellow-400 to-yellow-600',
+      textColor: '#FFD700', // Gold
       rank: 1
     },
     {
-      place: '2nd Prize',
+      place: 'Runner up - 1',
       amount: '₹20,000',
       description: 'worth gift voucher',
       color: 'from-gray-300 to-gray-500',
+      textColor: '#C0C0C0', // Silver
       rank: 2
     },
     {
-      place: '3rd Prize',
+      place: 'Runner up - 2',
       amount: '₹10,000',
       description: 'worth gift voucher',
       color: 'from-amber-600 to-amber-800',
+      textColor: '#CD7F32', // Bronze
       rank: 3
     },
   ];
@@ -31,10 +34,19 @@ const Prizes = () => {
     <section id="prizes" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">
-          Prize Pool ₹60,000
+          Prize & Rewards
         </h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="text-center text-xl font-medium text-green-300 mt-2 mb-6 max-w-2xl mx-auto"
+        >
+          Win exciting rewards from a prize pool worth ₹60,000!
+        </motion.p>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-3 gap-8 mt-8">
           {prizes.map((prize, index) => (
             <motion.div
               key={prize.place}
@@ -48,7 +60,7 @@ const Prizes = () => {
                 <PrizeBadge rank={prize.rank} />
               </div>
               <h3 className="text-2xl font-bold mb-2">
-                <span className={`bg-gradient-to-r ${prize.color} bg-clip-text text-transparent`}>
+                <span style={{ color: prize.textColor }}>
                   {prize.place}
                 </span>
               </h3>

@@ -1,32 +1,19 @@
 import React from 'react';
 
 const PrizeBadge = ({ rank }) => {
-  // Define the glow effect filter
-  const glowFilter = (
-    <defs>
-      <filter id={`glow-${rank}`} x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="2" result="blur" />
-        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-      </filter>
-    </defs>
-  );
-
-  // Define different colors for each rank
+  // Define traditional medal colors for each rank
   const colors = {
     1: {
-      primary: "#00ff00", // Neon green
-      secondary: "#00cc00",
-      glow: "#00ff0080"
+      primary: "#FFD700", // Gold
+      secondary: "#DAA520", // Darker gold for contrast
     },
     2: {
-      primary: "#00e5ff", // Cyan
-      secondary: "#00b8cc",
-      glow: "#00e5ff80"
+      primary: "#C0C0C0", // Silver
+      secondary: "#A9A9A9", // Darker silver for contrast
     },
     3: {
-      primary: "#ff00ff", // Magenta
-      secondary: "#cc00cc",
-      glow: "#ff00ff80"
+      primary: "#CD7F32", // Bronze
+      secondary: "#A0522D", // Darker bronze for contrast
     }
   };
 
@@ -41,17 +28,14 @@ const PrizeBadge = ({ rank }) => {
       xmlns="http://www.w3.org/2000/svg"
       className="prize-badge"
     >
-      {glowFilter}
-      
-      {/* Outer Ring with Glow */}
+      {/* Outer Ring */}
       <circle
         cx="60"
         cy="60"
         r="55"
         stroke={color.primary}
-        strokeWidth="2"
+        strokeWidth="2.5"
         fill="none"
-        filter={`url(#glow-${rank})`}
       />
 
       {/* Inner Ring */}
@@ -97,7 +81,6 @@ const PrizeBadge = ({ rank }) => {
           fontFamily: 'Tomorrow, sans-serif',
           fontWeight: 'bold'
         }}
-        filter={`url(#glow-${rank})`}
       >
         {rank}
       </text>
