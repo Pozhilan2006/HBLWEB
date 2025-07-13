@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const Partners = () => {
+const Sponsors = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -18,30 +18,26 @@ const Partners = () => {
           className="flex flex-col items-center"
           data-aos="fade-up"
         >
-          <h3 className="text-neutral-400 text-center text-sm mb-3 tracking-widest uppercase font-tomorrow">
-            PARTNERS
+          <h3 className="text-neutral-400 text-center text-sm mb-8 tracking-widest uppercase font-tomorrow">
+            SPONSORS
           </h3>
           
-          <p className="text-gray-300 text-center text-base mb-8 max-w-2xl">
-            Powered by industry leaders and innovators
-          </p>
-          
           <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-y-6 sm:gap-x-4 md:gap-x-8">
-            {/* Left Logo - Rsmart */}
+            {/* Left Logo - Devfolio */}
             <div className="cyberpunk-card flex justify-center items-center w-full sm:w-1/2 max-w-md aspect-[4/2] p-4">
               <img 
-                src="/assets/images/Rsmart-logo.png" 
-                alt="Rsmart Partner Logo" 
-                className="w-auto max-h-full object-contain transition-all duration-300 hover:brightness-125"
+                src="/assets/images/sponsors/Devfollio.png"
+                alt="Devfolio Logo" 
+                className="w-auto max-h-60 object-contain transition-all duration-300 hover:brightness-125"
               />
             </div>
             
-            {/* Right Logo - AIC */}
+            {/* Right Logo - ETHIndia */}
             <div className="cyberpunk-card flex justify-center items-center w-full sm:w-1/2 max-w-md aspect-[4/2] p-4">
               <img 
-                src="/assets/images/AIC-logo.png" 
-                alt="AIC Partner Logo" 
-                className="w-auto max-h-full object-contain transition-all duration-300 hover:brightness-125"
+                src="/assets/images/sponsors/ETHIndia.png" 
+                alt="ETHIndia Logo" 
+                className="w-auto max-h-60 object-contain transition-all duration-300 hover:brightness-125"
               />
             </div>
           </div>
@@ -51,4 +47,4 @@ const Partners = () => {
   );
 };
 
-export default Partners;
+export default Sponsors;

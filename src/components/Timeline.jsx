@@ -23,7 +23,7 @@ const timelineData = [
   },
   {
     phase: "Phase V",
-    title: "Judging & Awards",
+    title: "Odyssey Victors Reveal",
     date: "August 25, 2025",
   }
 ];

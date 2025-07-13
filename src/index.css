@@ -342,4 +342,32 @@
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+/* Join Now Button Styles */
+.join-now-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.join-now-button:hover {
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.8),
+               0 0 20px rgba(57, 255, 20, 0.5);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.7),
+              0 0 30px rgba(57, 255, 20, 0.4),
+              0 0 45px rgba(57, 255, 20, 0.2);
+  animation: button-pulse 1.5s infinite alternate;
+}
+
+@keyframes button-pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.7),
+                0 0 30px rgba(57, 255, 20, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.9),
+                0 0 40px rgba(57, 255, 20, 0.6),
+                0 0 60px rgba(57, 255, 20, 0.3);
+  }
 } 

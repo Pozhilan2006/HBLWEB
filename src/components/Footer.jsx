@@ -1,41 +1,15 @@
 import { useState } from 'react';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setEmail('');
-      setMessage('');
-      
-      // Reset status after 3 seconds
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 3000);
-    }, 1000);
-  };
-
   return (
     <footer className="py-16 border-t border-gray-800">
       <div className="container mx-auto px-4">
-        {/* Main Footer Content - 3 Columns */}
+        {/* Main Footer Content - 2 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Left Column - Logo and Social */}
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-white">&lt;HackBeyondLimit$&gt;</h2>
-            <p className="text-gray-400">Go Beyond. Hack Beyond.</p>
-            
+          {/* Left Column - Connect with Us */}
+          <div className="space-y-4">
             {/* Connect with Us Section */}
-            <div className="mt-6">
+            <div>
               <h3 className="text-lg font-medium text-white mb-3">Connect with Us</h3>
               <div className="flex flex-wrap gap-4">
                 {/* Instagram */}
@@ -53,7 +27,7 @@ const Footer = () => {
                 
                 {/* Discord */}
                 <a 
-                  href="https://discord.gg/Q3gvzgrP" 
+                  href="https://discord.gg/Vhk6egt6" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-all hover:scale-110"
@@ -79,7 +53,7 @@ const Footer = () => {
                 
                 {/* Official Email */}
                 <a 
-                  href="mailto:techhub@rathinam.in" 
+                  href="mailto:hackbeyondlimits@gmail.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-all hover:scale-110"
@@ -90,41 +64,56 @@ const Footer = () => {
                   </svg>
                 </a>
                 
-                {/* Event Email */}
-                <a 
-                  href="mailto:hackbeyondlimits@gmail.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-all hover:scale-110"
-                  title="Event Email"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                  </svg>
-                </a>
-                
                 {/* WhatsApp */}
                 <a 
-                  href="https://wa.me/919876543210" 
+                  href="https://wa.me/919843743705" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-all hover:scale-110"
                   title="WhatsApp"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
                 </a>
               </div>
             </div>
           </div>
           
-          {/* Middle Column - Contact Info */}
-          <div className="space-y-6">
+          {/* Center Column - Discord Button */}
+          <div className="flex items-center justify-center w-full">
+            <div className="flex flex-col items-center w-full md:w-3/4">
+              <span className="text-gray-400 text-lg mb-4">
+                Hack Beyond Limits – Online Odyssey
+              </span>
+              <a
+                href="https://discord.gg/Q3gvzgrP"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full px-10 py-4 bg-neon-green hover:bg-green-400 text-black font-bold rounded-2xl transition-all duration-300 group hover:shadow-[0_0_15px_rgba(0,255,204,0.5)] hover:scale-105"
+              >
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="w-8 h-8 mr-3 transition-transform duration-300 group-hover:scale-110" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026 13.83 13.83 0 0 0 1.226-1.963.074.074 0 0 0-.041-.104 13.175 13.175 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z"/>
+                </svg>
+                <span className="text-2xl">Join our Discord</span>
+              </a>
+            </div>
+          </div>
+          
+          {/* Right Column - Contact Info */}
+          <div className="space-y-6 md:text-right">
             <h3 className="text-xl font-semibold text-white">Contact Us</h3>
             <div className="space-y-4">
               <p className="text-gray-400">
-                Rathinam College Of Arts And Science
+                Event Manager
+              </p>
+              <p className="text-gray-400">
+                S Aasil Ahamed
               </p>
               <p className="text-gray-400">
                 <a href="mailto:techhub@rathinam.in" className="hover:text-white transition-colors">
@@ -132,53 +121,11 @@ const Footer = () => {
                 </a>
               </p>
               <p className="text-gray-400">
-                <a href="tel:+916374060864" className="hover:text-white transition-colors">
-                  +91 63740 60864
+                <a href="tel:+919843743705" className="hover:text-white transition-colors">
+                +91 98437 43705
                 </a>
               </p>
             </div>
-          </div>
-          
-          {/* Right Column - Contact Form */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-white">Drop Us a Query</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your Email"
-                  required
-                  className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 text-white"
-                />
-              </div>
-              <div>
-                <textarea
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Your Query"
-                  required
-                  rows={4}
-                  className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 text-white resize-none"
-                ></textarea>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors w-full"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Submit'}
-                </button>
-                
-                {submitStatus === 'success' && (
-                  <p className="mt-2 text-green-500 text-sm">
-                    Your message has been sent successfully!
-                  </p>
-                )}
-              </div>
-            </form>
           </div>
         </div>
         

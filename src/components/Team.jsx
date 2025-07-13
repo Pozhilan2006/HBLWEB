@@ -6,43 +6,75 @@ const Team = () => {
       name: 'Arun Kumar K',
       role: 'Community Lead',
       image: '/assets/images/team/Arun Kumar.jpg',
+      linkedin: 'https://www.linkedin.com/in/arun-kumar-k-j006/',
     },
     {
       name: 'Pozhilan A',
       role: 'Technical Lead',
       image: '/assets/images/team/Pozhilan.jpg',
-    },
-    {
-      name: 'Aasil Ahamed S',
-      role: 'Event Manager',
-      image: '/assets/images/team/Aasil Ahammed.jpg',
+      linkedin: 'https://www.linkedin.com/in/pozhilan-a-41a781346/',
     },
     {
       name: 'Mohamed Naseem M',
       role: 'Technical Director',
       image: '/assets/images/team/Naseem.jpg',
+      linkedin: 'http://linkedin.com/in/mohammed-naseem-852b46286',
     },
     {
-      name: 'Mayur Karthick P',
-      role: 'Mentorship Manager',
-      image: '/assets/images/team/Mayur.jpg',
-    },
-    {
-      name: 'Liejo S',
-      role: 'Brand Manager',
-      image: '/assets/images/team/Liejo.jpg',
+      name: 'Aasil Ahamed S',
+      role: 'Event Manager',
+      image: '/assets/images/team/Aasil Ahammed.jpg',
+      linkedin: 'https://www.linkedin.com/in/s-aasil-ahamed/',
     },
     {
       name: 'Mohammed Irfan S',
       role: 'Event Coordinator',
       image: '/assets/images/team/Irfan.jpg',
+      linkedin: 'https://www.linkedin.com/in/md-irfan-3a3229322/',
     },
     {
       name: 'Praveen R',
       role: 'Event Director',
       image: '/assets/images/team/Praveen.jpg',
+      linkedin: 'https://www.linkedin.com/in/praveen-pk-3a81592a4/',
     },
-  ];
+    {
+      name: 'Liejo S',
+      role: 'Brand Manager',
+      image: '/assets/images/team/Liejo.jpg',
+      linkedin: 'https://www.linkedin.com/in/liejos/',
+    },
+    {
+      name: 'Retheesh R',
+      role: 'Technical Support',
+      image: '/assets/images/team/Retheesh.jpg',
+      linkedin: 'https://www.linkedin.com/in/retheesh-r-71849a281/',
+    },
+    {
+      name: 'Maniprashath KS',
+      role: 'Technical Support',
+      image: '/assets/images/team/ManiPrashath.jpg',
+      linkedin: 'https://www.linkedin.com/in/maniprashath-k-s-7a0004327',
+    },
+    {
+      name: 'Vineeth NE',
+      role: 'Technical Support',
+      image: '/assets/images/team/Vineeth.jpg',
+      linkedin: 'https://www.linkedin.com/in/vineeth-n-e-85b66a31b',
+    },
+    {
+      name: 'Madesh A',
+      role: 'Managment Support',
+      image: '/assets/images/team/Madesh.jpg',
+      linkedin: 'https://www.linkedin.com/in/madesh-madesh-6718b4372',
+    },
+    {
+      name: 'Dinesh G',
+      role: 'Managment Support',
+      image: '/assets/images/team/Dinesh.jpg',
+      linkedin: 'http://linkedin.com/in/dinesh-dinesh-g',
+    },
+  ];  
 
   return (
     <section id="team" className="py-20 relative">
@@ -87,6 +119,21 @@ const Team = () => {
               <p className="text-gray-400 text-center mt-2">
                 {member.role}
               </p>
+              
+              {/* LinkedIn Icon */}
+              <div className="flex justify-center mt-3">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#0A66C2] transition-all hover:scale-110"
+                  aria-label={`${member.name}'s LinkedIn profile`}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>

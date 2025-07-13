@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Introduction from './components/Introduction';
 import OrganizedBy from './components/OrganizedBy';
 import Partners from './components/Partners';
 import Domains from './components/Domains';
 import Timeline from './components/Timeline';
 import Prizes from './components/Prizes';
+import Sponsors from './components/Sponsors';
 import Gallery from './components/Gallery';
 import Team from './components/Team';
 import Contact from './components/Contact';
@@ -55,10 +57,12 @@ function App() {
         
         <main className="relative z-20">
           <Hero />
+          <Introduction />
           <OrganizedBy />
           <Domains />
           <Timeline />
           <Prizes />
+          <Sponsors />
           <Partners />
           <Gallery />
           <Team />
