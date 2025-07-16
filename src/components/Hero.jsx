@@ -1,6 +1,19 @@
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 const Hero = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section
       id="hero"
@@ -53,30 +66,15 @@ const Hero = () => {
                 "Go Beyond Hack Beyond"
               </p>
             </motion.div>
-
-            {/* Devfolio Apply Button */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="mt-8 sm:mt-10 flex justify-center"
-            >
-              {/* TODO: Update with actual Devfolio hackathon link when available */}
-              <a 
-                href="https://devfolio.co" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <img 
-                  src="https://apply.devfolio.co/buttons/default-white.svg" 
-                  alt="Apply with Devfolio" 
-                  style={{ height: "40px", width: "auto" }} 
-                  className="transform hover:scale-105 transition-transform duration-300"
-                />
-              </a>
-            </motion.div>
           </motion.div>
+
+          {/* Devfolio Apply Button */}
+          <div
+            className="apply-button"
+            data-hackathon-slug="hackbeyondlimits"
+            data-button-theme="light"
+            style={{ height: '44px', width: '312px', marginTop: '2rem' }}
+          ></div>
         </div>
       </div>
     </section>
