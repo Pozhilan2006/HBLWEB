@@ -19,7 +19,7 @@ const Sponsors = () => {
           data-aos="fade-up"
         >
           <h3 className="text-neutral-400 text-center text-sm mb-8 tracking-widest uppercase font-tomorrow">
-            SPONSORS
+            GOLDEN SPONSORS
           </h3>
           
           <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-y-6 sm:gap-x-4 md:gap-x-8">

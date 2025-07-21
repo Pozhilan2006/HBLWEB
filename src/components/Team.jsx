@@ -76,12 +76,52 @@ const Team = () => {
     },
   ];  
 
+  const TeamCard = ({ member, index }) => (
+    <motion.div
+      key={member.name}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="cyberpunk-card group flex-none min-w-[250px]"
+    >
+      <div className="relative w-40 h-40 mx-auto mb-4 rounded-lg overflow-hidden ring-1 ring-electric-blue/20 transition-all duration-300 group-hover:ring-2 group-hover:ring-electric-blue group-hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] group-hover:scale-105">
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+
+      <h3 className="text-xl font-semibold text-electric-blue text-center transition-colors duration-300 group-hover:text-neon-green">
+        {member.name}
+      </h3>
+      <p className="text-gray-400 text-center mt-2">
+        {member.role}
+      </p>
+      
+      <div className="flex justify-center mt-3">
+        <a
+          href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-[#0A66C2] transition-all hover:scale-110"
+          aria-label={`${member.name}'s LinkedIn profile`}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+      </div>
+    </motion.div>
+  );
+
   return (
     <section id="team" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">Command Crew</h2>
 
-        {/* Quote */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -94,48 +134,20 @@ const Team = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="cyberpunk-card group"
-            >
-              <div className="relative w-40 h-40 mx-auto mb-4 rounded-lg overflow-hidden ring-1 ring-electric-blue/20 transition-all duration-300 group-hover:ring-2 group-hover:ring-electric-blue group-hover:shadow-[0_0_15px_rgba(0,255,255,0.3)] group-hover:scale-105">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-300"
-                  loading="lazy"
-                />
-              </div>
-
-              <h3 className="text-xl font-semibold text-electric-blue text-center transition-colors duration-300 group-hover:text-neon-green">
-                {member.name}
-              </h3>
-              <p className="text-gray-400 text-center mt-2">
-                {member.role}
-              </p>
-              
-              {/* LinkedIn Icon */}
-              <div className="flex justify-center mt-3">
-                <a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[#0A66C2] transition-all hover:scale-110"
-                  aria-label={`${member.name}'s LinkedIn profile`}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
-            </motion.div>
-          ))}
+        {/* Auto-scrolling container with hover pause */}
+        <div className="relative overflow-hidden">
+          <div className="flex whitespace-nowrap gap-x-6 scrollbar-none group/scroll">
+            {/* First set of cards */}
+            <div className="flex gap-x-6 animate-scroll-left group-hover/scroll:animate-scroll-left-pause">
+              {teamMembers.map((member, index) => (
+                <TeamCard key={`${member.name}-1`} member={member} index={index} />
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {teamMembers.map((member, index) => (
+                <TeamCard key={`${member.name}-2`} member={member} index={index} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

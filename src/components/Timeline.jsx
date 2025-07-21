@@ -9,17 +9,17 @@ const timelineData = [
   {
     phase: "Phase II",
     title: "Registration Ends",
-    date: "August 5, 2025",
+    date: "August 12, 2025",
   },
   {
     phase: "Phase III",
     title: "48-Hour Hack Sprint",
-    date: "August 8-10, 2025",
+    date: "August 15-17, 2025",
   },
   {
     phase: "Phase IV",
     title: "Project Submission",
-    date: "August 10, 2025",
+    date: "August 17, 2025",
   },
   {
     phase: "Phase V",

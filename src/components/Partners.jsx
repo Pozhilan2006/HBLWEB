@@ -26,7 +26,8 @@ const Partners = () => {
             Powered by industry leaders and innovators
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-y-6 sm:gap-x-4 md:gap-x-8">
+          {/* Industry Partners */}
+          <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-y-6 sm:gap-x-4 md:gap-x-8 mb-12">
             {/* Left Logo - Rsmart */}
             <div className="cyberpunk-card flex justify-center items-center w-full sm:w-1/2 max-w-md aspect-[4/2] p-4">
               <img 
@@ -43,6 +44,23 @@ const Partners = () => {
                 alt="AIC Partner Logo" 
                 className="w-auto max-h-full object-contain transition-all duration-300 hover:brightness-125"
               />
+            </div>
+          </div>
+
+          {/* Social Media Partner */}
+          <div className="w-full">
+            <h3 className="text-neutral-400 text-center text-sm mb-6 tracking-widest uppercase font-tomorrow">
+              MEDIA PARTNER
+            </h3>
+            
+            <div className="flex justify-center">
+              <div className="cyberpunk-card flex justify-center items-center w-full max-w-md aspect-[4/2] p-4">
+                <img 
+                  src="/assets/images/Eventopia.png" 
+                  alt="Eventopia - Social Media Partner" 
+                  className="w-auto max-h-full object-contain transition-all duration-300 hover:brightness-125"
+                />
+              </div>
             </div>
           </div>
         </motion.div>
