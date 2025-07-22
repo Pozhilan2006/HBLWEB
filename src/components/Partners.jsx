@@ -55,11 +55,17 @@ const Partners = () => {
             
             <div className="flex justify-center">
               <div className="cyberpunk-card flex justify-center items-center w-full max-w-md aspect-[4/2] p-4">
-                <img 
-                  src="/assets/images/Eventopia.png" 
-                  alt="Eventopia - Social Media Partner" 
-                  className="w-auto max-h-full object-contain transition-all duration-300 hover:brightness-125"
-                />
+                <a 
+                  href="https://eventopia.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <img 
+                    src="/assets/images/Eventopia.png" 
+                    alt="Eventopia - Social Media Partner" 
+                    className="w-auto max-h-full object-contain transition-all duration-300 hover:brightness-125"
+                  />
+                </a>
               </div>
             </div>
           </div>
